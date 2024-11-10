@@ -2,10 +2,6 @@
 
 Welcome to the Interactive Calculator! This project is a fully responsive, feature-rich calculator with a sleek and modern UI. Designed with a theme toggle (light/dark mode) and optimized for mobile devices, it’s a great tool for performing basic arithmetic operations and learning frontend skills.
 
-## 📸 Preview
-
-![Calculator Preview](preview-image.png) <!-- Replace with a link to a hosted image if available -->
-
 ## 🎨 Features
 
 - **Responsive Design**: Optimized for both desktop and mobile devices.
@@ -41,7 +37,7 @@ The theme toggle is implemented using CSS variables and JavaScript to dynamicall
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/interactive-calculator.git
+   git clone https://github.com/nishitsaha52/CalcMaster.git
    ```
 
 2. **Navigate to the project directory**:
@@ -67,14 +63,6 @@ The theme toggle is implemented using CSS variables and JavaScript to dynamicall
 - Enter numbers and use the provided buttons for operations.
 - Clear the screen using the **C** button.
 - Toggle between **light and dark themes** by clicking the toggle switch at the top.
-
-## 🖼️ Screenshots
-
-![Dark Theme Preview](dark-theme.png) <!-- Replace with links to screenshots if available -->
-*Dark theme showcasing gold highlights and shadows*
-
-![Light Theme Preview](light-theme.png)
-*Light theme with subtle shadowing and lighter tones*
 
 ## 📐 Responsive Design
 
