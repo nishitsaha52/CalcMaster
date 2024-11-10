@@ -8,18 +8,16 @@ function CurrencyConverter() {
     const [exchangeRate, setExchangeRate] = useState(null);
     const [result, setResult] = useState(null);
 
-    const API_KEY = "b8c53ce1c17bc52d70f185e4";  // Replace with your actual API key
-    const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/`;
+    const API_URL = `https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_API_KEY}/latest/`;
 
     useEffect(() => {
-        // Fetch the list of currencies and set default exchange rate
         fetchCurrencies();
         fetchExchangeRate(baseCurrency, targetCurrency);
     }, [baseCurrency, targetCurrency]);
 
     const fetchCurrencies = async () => {
         try {
-            const response = await fetch(`${API_URL}USD`); // Using USD as base for getting currency list
+            const response = await fetch(`${API_URL}USD`);
             const data = await response.json();
             setCurrencies(Object.keys(data.conversion_rates));
         } catch (error) {
