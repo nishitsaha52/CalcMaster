@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* Dark Theme Variables */
+:root {
+  --bg-color: #1a1a1a;
+  --text-color: #fff;
+  --primary-color: #333;
+  --highlight-color: #ffcc00;
+  --button-bg: #444;
+  --button-hover-bg: #555;
+  --input-bg: #222;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --highlight-shadow: rgba(255, 204, 0, 0.5);
+}
+
+/* Light Theme Variables */
+.light-theme {
+  --bg-color: #f5f5f5;
+  --text-color: #222;
+  --primary-color: #ddd;
+  --highlight-color: #333;
+  --button-bg: #bbb;
+  --button-hover-bg: #999;
+  --input-bg: #eee;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --highlight-shadow: rgba(50, 50, 50, 0.4);
+}
+
+/* Base Styling */
+.app {
+  font-family: "Oswald", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 10px;
+}
+
+/* Header Styles */
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 10px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+h1 {
+  font-size: 2em;
+  color: var(--highlight-color);
+  margin: 0;
+  text-shadow: 2px 2px 5px var(--shadow-color);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: var(--button-bg);
+  border-radius: 30px;
+  padding: 8px;
+  width: 50px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle .circle {
+  background: var(--highlight-color);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.light-theme .theme-toggle .circle {
+  transform: translateX(22px);
+}
+
+/* Navigation Menu */
+nav {
+  width: 100%;
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav li {
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: rgba(255, 204, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav li:hover {
+  color: #ffcc00;
+  background: rgba(255, 204, 0, 0.25);
+  transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+  background-color: var(--button-bg);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+/* Titles and Form Styling */
+h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: var(--highlight-color);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.converter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+input, select {
+  font-size: 1.1em;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--input-bg);
+  color: var(--text-color);
+  box-shadow: inset 0 2px 4px var(--shadow-color);
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+  box-shadow: inset 0 2px 8px var(--highlight-shadow);
+}
+
+.convert-button {
+  background: linear-gradient(135deg, var(--highlight-color), #ffb300);
+  color: var(--primary-color);
+  font-size: 1.3em;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px var(--highlight-shadow);
+  transition: all 0.3s ease;
+}
+
+.convert-button:hover {
+  background: linear-gradient(135deg, #e6b800, #cc9900);
+  transform: scale(1.05);
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.6em;
+  color: var(--highlight-color);
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px var(--shadow-color);
+}
+
+/* Calculator-specific Styling */
+.calculator {
+  max-width: 450px;
+  margin: auto;
+  padding: 25px;
+  background: var(--button-bg);
+  border-radius: 20px;
+  box-shadow: 0 6px 15px var(--shadow-color);
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 15px;
+  background: var(--input-bg);
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+input[type="text"] {
+  width: 100%;
+  font-size: 1.6em;
+  background: var(--input-bg);
+  border: none;
+  color: var(--text-color);
+  text-align: right;
+  padding: 15px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+button {
+  font-size: 1.3em;
+  padding: 18px;
+  background: var(--button-bg);
+  border: none;
+  color: var(--text-color);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: var(--button-hover-bg);
+  transform: scale(1.05);
+}
+
+.clear {
+  background: #ff4d4d;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Footer Styles */
+footer {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 25px;
+  text-align: center;
+  color: var(--highlight-color);
+  border-top: 2px solid var(--highlight-color);
+  box-shadow: 0 -2px 10px var(--shadow-color);
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+footer a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff9900;
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Header Title */
+  h1 {
+    font-size: 1.8em;
+  }
+
+  /* Theme Toggle */
+  .theme-toggle {
+    width: 45px;
+    padding: 6px;
+  }
+
+  .theme-toggle .circle {
+    width: 20px;
+    height: 20px;
+    left: 2px;
+  }
+
+  /* Navigation */
+  nav ul {
+    gap: 10px;
+  }
+
+  nav li {
+    font-size: 1em;
+    padding: 5px 10px;
+  }
+
+  /* Main Content */
+  main {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  /* Calculator & Converter Form */
+  .buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .converter-form {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  nav li {
+    padding: 4px 8px;
+  }
+
+  .convert-button {
+    font-size: 1.1em;
+  }
+}
