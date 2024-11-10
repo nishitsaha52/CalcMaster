@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+# 🧮 Interactive Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Interactive Calculator! This project is a fully responsive, feature-rich calculator with a sleek and modern UI. Designed with a theme toggle (light/dark mode) and optimized for mobile devices, it’s a great tool for performing basic arithmetic operations and learning frontend skills.
 
-## Available Scripts
+## 📸 Preview
 
-In the project directory, you can run:
+![Calculator Preview](preview-image.png) <!-- Replace with a link to a hosted image if available -->
 
-### `npm start`
+## 🎨 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Theme Toggle**: Switch between light and dark themes with a smooth toggle button.
+- **Basic Operations**: Perform standard calculations like addition, subtraction, multiplication, and division.
+- **Styled UI**: Designed with modern styling, shadows, gradients, and smooth transitions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Live Demo
 
-### `npm test`
+[View Live Demo](https://your-demo-link.com) <!-- Replace with actual link to the live demo if available -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
 
-### `npm run build`
+- **HTML**
+- **CSS (with custom themes)**
+- **JavaScript**
+- **React.js** for interactivity and component structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🎛️ Theme Toggle
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The calculator includes a theme toggle button, allowing users to switch between light and dark modes for better readability in different lighting conditions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### How it Works
 
-### `npm run eject`
+1. **Dark Mode** (default): A sleek, high-contrast color scheme with gold highlights.
+2. **Light Mode**: A soft color scheme, easier on the eyes for daylight use.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The theme toggle is implemented using CSS variables and JavaScript to dynamically switch themes without reloading the page.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🖱️ Usage Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Running Locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/interactive-calculator.git
+   ```
 
-## Learn More
+2. **Navigate to the project directory**:
+   ```bash
+   cd interactive-calculator
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Run the application**:
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+5. **Open the calculator in your browser**:
+   Go to `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Calculator Usage
 
-### Analyzing the Bundle Size
+- Enter numbers and use the provided buttons for operations.
+- Clear the screen using the **C** button.
+- Toggle between **light and dark themes** by clicking the toggle switch at the top.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🖼️ Screenshots
 
-### Making a Progressive Web App
+![Dark Theme Preview](dark-theme.png) <!-- Replace with links to screenshots if available -->
+*Dark theme showcasing gold highlights and shadows*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Light Theme Preview](light-theme.png)
+*Light theme with subtle shadowing and lighter tones*
 
-### Advanced Configuration
+## 📐 Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The calculator is fully responsive, adapting seamlessly to different screen sizes. 
 
-### Deployment
+- **Desktop**: Full view with wider layout and full button grid.
+- **Mobile**: Compact layout with easy-to-tap buttons and responsive grid.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📁 Folder Structure
 
-### `npm run build` fails to minify
+```plaintext
+interactive-calculator/
+├── public/
+│   ├── index.html
+├── src/
+│   ├── components/
+│   │   ├── Calculator.js       # Main calculator component
+│   │   └── ThemeToggle.js      # Theme toggle button component
+│   ├── styles/
+│   │   ├── App.css             # Main app styling
+│   │   └── theme.css           # Light and dark theme styles
+│   ├── App.js                  # Main app file
+│   └── index.js                # Entry point
+├── README.md
+├── package.json
+└── .gitignore
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 CSS Theme Overview
+
+CSS is managed using CSS variables, which adjust dynamically when the theme toggle is activated. The following CSS variables control the overall look:
+
+```css
+/* Dark Theme */
+:root {
+  --bg-color: #1a1a1a;
+  --text-color: #fff;
+  --highlight-color: #ffcc00;
+}
+
+/* Light Theme */
+.light-theme {
+  --bg-color: #f5f5f5;
+  --text-color: #222;
+  --highlight-color: #333;
+}
+```
+
+## 🤝 Contributions
+
+Contributions are welcome! If you find bugs or want to improve the calculator, please open an issue or submit a pull request.
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/YourFeature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/YourFeature`
+5. Open a pull request
+
+---
