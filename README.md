@@ -11,7 +11,7 @@ Welcome to the Interactive Calculator! This project is a fully responsive, featu
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-demo-link.com) <!-- Replace with actual link to the live demo if available -->
+[View Live Demo](https://calc-master-gamma.vercel.app/) <!-- Replace with actual link to the live demo if available -->
 
 ## 🛠️ Tech Stack
 
