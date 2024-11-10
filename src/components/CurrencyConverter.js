@@ -8,7 +8,7 @@ function CurrencyConverter() {
     const [exchangeRate, setExchangeRate] = useState(null);
     const [result, setResult] = useState(null);
 
-    const API_KEY = "b8c53ce1c17bc52d70f185e4";  // Replace with your actual API key
+    const API_KEY = process.env.REACT_APP_EXCHANGE_API_KEY; // Access the API key from environment variables
     const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/`;
 
     useEffect(() => {
